@@ -1,0 +1,18 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
+# benchmark results are committed; intermediate artifacts are not
+benchmarks/results/*.tmp
+benchmarks/results/.cache/
+
+# eval intermediate
+evals/.runs/
+
+# raw eval snapshots are local-only and machine-specific;  the aggregated,
+# committed report (benchmarks/results/*.md) is the published artifact.
+evals/snapshots/*.json
+!evals/snapshots/.gitkeep

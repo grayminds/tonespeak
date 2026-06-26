@@ -1,0 +1,81 @@
+{
+  "version": "0.1",
+  "description": "Tonespeak benchmark prompts.  See shared/BENCHMARK_PROMPTS.md for the human-readable companion.",
+  "prompts": [
+    {
+      "id": "react-rerender",
+      "prompt": "Explain why a React component re-renders unexpectedly.",
+      "expected_keywords": ["useState", "useEffect", "props", "memo", "dependency"]
+    },
+    {
+      "id": "connection-refused",
+      "prompt": "Debug a 'connection refused' error in a Python HTTP client.  What are the most likely causes and how do I diagnose each?",
+      "expected_keywords": ["ECONNREFUSED", "port", "firewall", "timeout", "bind"]
+    },
+    {
+      "id": "postgres-migration",
+      "prompt": "Write a 5-step migration plan for moving a Postgres database from on-prem to RDS.",
+      "expected_keywords": ["pg_dump", "replication", "cutover", "parameter", "downtime"]
+    },
+    {
+      "id": "pr-security-review",
+      "prompt": "Review this PR diff for security issues:\n\n```diff\n+def login(request):\n+    user = request.GET.get('user')\n+    pw = request.GET.get('pw')\n+    query = f\"SELECT * FROM users WHERE name='{user}' AND password='{pw}'\"\n+    result = db.execute(query)\n+    if result:\n+        response = HttpResponse(f\"Welcome {user}\")\n+        response.set_cookie('session', user)\n+        return response\n```",
+      "expected_keywords": ["SQL injection", "password", "cookie", "validation", "hash"]
+    },
+    {
+      "id": "microservices-monolith",
+      "prompt": "Explain the tradeoffs between microservices and monolith architecture.",
+      "expected_keywords": ["latency", "deploy", "network", "transaction", "coupling"]
+    },
+    {
+      "id": "high-cpu-runbook",
+      "prompt": "Generate a runbook entry for 'high CPU on web-tier'.  Include detection, triage, mitigation, and escalation.",
+      "expected_keywords": ["top", "perf", "scale", "restart", "alert"]
+    },
+    {
+      "id": "maintenance-slack",
+      "prompt": "Draft a Slack message announcing a 30-minute maintenance window for the auth service tomorrow at 2am UTC.  Audience is engineering and on-call.",
+      "expected_keywords": ["timestamp", "impact", "services", "contact", "rollback"]
+    },
+    {
+      "id": "dns-postmortem",
+      "prompt": "Write a postmortem summary for a 3-hour outage caused by DNS misconfiguration.  Include cause, blast radius, recovery, and action items.",
+      "expected_keywords": ["DNS", "TTL", "propagation", "MTTR", "action"]
+    },
+    {
+      "id": "rest-vs-graphql",
+      "prompt": "Compare REST vs GraphQL for a mobile-first API.  What are the practical tradeoffs?",
+      "expected_keywords": ["over-fetch", "caching", "schema", "payload", "subscription"]
+    },
+    {
+      "id": "vlan-trunk",
+      "prompt": "Configure a VLAN trunk port on a managed switch.  Port 3 should be access on VLAN 20, port 8 should be trunked with VLAN 20 native.",
+      "expected_keywords": ["trunk", "tagged", "untagged", "PVID", "native"]
+    },
+    {
+      "id": "rebase-vs-merge",
+      "prompt": "Explain git rebase vs merge.  When should I use each?",
+      "expected_keywords": ["linear", "conflict", "merge commit", "fast-forward", "history"]
+    },
+    {
+      "id": "callback-async",
+      "prompt": "Refactor this callback pyramid into async/await:\n\n```javascript\nfs.readFile('a.txt', (err, a) => {\n  if (err) return cb(err);\n  fs.readFile('b.txt', (err, b) => {\n    if (err) return cb(err);\n    db.query(a + b, (err, result) => {\n      if (err) return cb(err);\n      cb(null, result);\n    });\n  });\n});\n```",
+      "expected_keywords": ["async", "await", "try", "catch", "Promise"]
+    },
+    {
+      "id": "commit-message",
+      "prompt": "Write a Conventional Commit message for: 'fix null deref in auth middleware caused by malformed JWT payload, added a null check before reading payload.sub'.",
+      "expected_keywords": ["fix", "auth", "scope", "null", "JWT"]
+    },
+    {
+      "id": "react-error-boundary",
+      "prompt": "Implement a React error boundary component with a logging hook that reports to Sentry.",
+      "expected_keywords": ["componentDidCatch", "getDerivedStateFromError", "fallback", "sentry", "componentStack"]
+    },
+    {
+      "id": "cap-theorem",
+      "prompt": "Explain the CAP theorem in one paragraph.",
+      "expected_keywords": ["consistency", "availability", "partition", "CP", "AP"]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "tonespeak-local",
+  "owner": {
+    "name": "Michael Gray",
+    "email": "michael-tech@grayminds.com",
+    "url": "https://github.com/grayminds"
+  },
+  "metadata": {
+    "description": "Local-source marketplace for the tonespeak multi-persona output-compression skill family.  Single-plugin marketplace.  Once tonespeak is published to a public marketplace this declaration will be retired."
+  },
+  "plugins": [
+    {
+      "name": "tonespeak",
+      "source": "./",
+      "description": "Multi-persona output-compression skill family.  24 dialects across bardspeak, spacespeak, and stylespeak.  Caveman-aligned pure-skill architecture.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Michael Gray",
+        "email": "michael-tech@grayminds.com"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/grayminds/tonespeak",
+      "category": "productivity",
+      "tags": ["compression", "persona", "tone", "caveman"]
+    }
+  ]
+}

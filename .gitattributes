@@ -1,0 +1,16 @@
+# Normalize line endings.  Source consumed by Node and bash is LF in both the
+# repository and the working tree, on every platform -- this keeps the
+# frontmatter loader and the dispatch shim behaving identically on Windows,
+# macOS, and Linux.  (The loader is also CRLF-tolerant as a belt-and-suspenders;
+# see src/lib/loader.js parseFrontmatter.)
+* text=auto eol=lf
+
+# Windows-native scripts, if ever added, want CRLF.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Maintainer working doc:  kept on the private Gitea remote, excluded from
+# `git archive` exports.  The public GitHub repo is published with a clean
+# history that omits it -- see RELEASING.md.
+HANDOFF.md export-ignore

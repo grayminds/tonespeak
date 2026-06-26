@@ -1,0 +1,37 @@
+{
+  "name": "tonespeak",
+  "version": "0.1.0",
+  "description": "Multi-persona output-compression skill family.  Three families (bardspeak, spacespeak, stylespeak), 24 dialects, strict per-dialect tone budget.",
+  "author": {
+    "name": "Michael Gray",
+    "email": "michael-tech@grayminds.com",
+    "url": "https://github.com/grayminds"
+  },
+  "homepage": "https://github.com/grayminds/tonespeak",
+  "license": "MIT",
+  "commands": "./commands",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/src/hooks/activate.js\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/src/hooks/tracker.js\""
+          }
+        ]
+      }
+    ]
+  }
+}

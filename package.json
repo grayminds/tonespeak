@@ -1,0 +1,52 @@
+{
+  "name": "tonespeak",
+  "version": "0.1.1",
+  "description": "Multi-persona output-compression skill family for Claude Code and sibling agents.  Three families (bardspeak, spacespeak, stylespeak), 24 dialects, strict per-dialect tone budget.",
+  "type": "module",
+  "main": "src/lib/loader.js",
+  "bin": {
+    "tonespeak": "./bin/install.js"
+  },
+  "scripts": {
+    "test": "node --test \"tests/*.test.js\"",
+    "lint:tone": "node evals/lint.js",
+    "install:dry": "node bin/install.js --dry-run --list"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "src",
+    "shared",
+    "bardspeak",
+    "spacespeak",
+    "stylespeak",
+    "skills",
+    "commands",
+    ".claude-plugin",
+    "AGENTS.md",
+    "GEMINI.md",
+    "LICENSE",
+    "README.md",
+    "INSTALL.md"
+  ],
+  "keywords": [
+    "claude-code",
+    "skill",
+    "token-compression",
+    "persona",
+    "tone",
+    "caveman"
+  ],
+  "author": "Michael Gray <michael-tech@grayminds.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grayminds/tonespeak.git"
+  },
+  "homepage": "https://github.com/grayminds/tonespeak#readme",
+  "bugs": {
+    "url": "https://github.com/grayminds/tonespeak/issues"
+  }
+}
